@@ -1,8 +1,8 @@
 
 #include <windows.h>
 #include <time.h>
-#include <stdio.h>
 
+//replace this to determine when the themes will set
 #define DAYTIME 7
 #define NIGHTTIME 18
 
@@ -15,11 +15,13 @@ int main(int argc, char* argv[])
     timeinfo = localtime(&rawtime);
     int hour = timeinfo->tm_hour;
 
-    //printf("%d", timeinfo->tm_hour);
-    char dark[] = "C:\\Users\\signaturekt\\Pictures\\wallpaper\\Sweet-Theme-Black.png";
-    char light[] = "C:\\Users\\signaturekt\\Pictures\\wallpaper\\Sweet-Theme.png";
+    //When creating PATH  use '\\' instead of '\'
+    //replace this with a night theme
+    char dark[] = "C:\\";
+    //replace this with a day theme
+    char light[] = "C:\\";
     
-    //
+    // check whether hour is bigger than night and less than day
     if(hour >= NIGHTTIME || hour <= DAYTIME) {
         SystemParametersInfoA(SPI_SETDESKWALLPAPER, 0, (PVOID *)dark, SPIF_SENDCHANGE);
     } else {
