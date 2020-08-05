@@ -12,7 +12,8 @@ char dark[] = "C:\\";
 //replace this with a day theme
 char light[] = "C:\\";
 ```
-Set the path to the image you would like to use. 
+Set the path to the image you would like to use.
+The image's name set with the PATH is case-sensitive.
 
 ##### Time
 ```
@@ -22,3 +23,9 @@ Set the path to the image you would like to use.
 > if(hour >= NIGHTTIME || hour <= DAYTIME)
 
 Using the 24 hour time system, you can adjust which theme is set depending on the hour.
+
+### Building
+use gcc to compile c file and run the executable.
+
+### Automate Program
+Add the program to "Task Sceduler" at the times that are set.
